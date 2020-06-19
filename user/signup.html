@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../icon/img/timg.jpg">
+    <title>注册页面</title>
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="login.php" class="navbar-brand"><img src="../icon/book.png">图书借阅管理系统</a>
+        </div>
+        <label id="toggle-label" class="visible-xs-inline-block" for="toggle-checkbox">MENU</label>
+        <input class="hidden" id="toggle-checkbox" type="checkbox">
+    </div>
+</div>
+<div class="container container-small">
+    <h3>注册用户</h3>
+    <form action="signup.php" method="post">
+        <div class="form-group">
+            <label>账号</label>
+            <input type="text" class="form-control" name="id">
+        </div>
+        <div class="form-group">
+            <label>用户名</label>
+            <input type="text" class="form-control" name="userName">
+        </div>
+        <div class="form-group">
+            <label>密码</label>
+            <input type="password" class="form-control" name="password">
+        </div>
+        <div class="form-group">
+            <label>邮箱</label>
+            <input type="text" class="form-control" name="email">
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary btn-block" value="注册">
+        </div>
+    </form>
+    <div class="form-group">
+        <button class="btn btn-primary btn-block" id="loginBack" onclick="loginBack()">返回登录</button>
+    </div>
+</div>
+<script type="text/javascript">
+    function loginBack() {
+        window.location.href = "login.php";
+        window.event.returnValue = false;
+    }
+</script>
+</body>
+</html>
